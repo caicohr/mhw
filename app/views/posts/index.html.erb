@@ -1,0 +1,8 @@
+<% title @group.name %>
+<h1>Posts:</h1>
+
+<%= render @posts %>
+
+<%= link_to "All Groups", groups_path %></br>
+<%= link_to "New Post", new_group_post_path(@group,@post), class: "btn btn-primary" %>
+ <!-- /posts/10/posts/new --!>

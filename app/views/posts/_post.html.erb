@@ -1,0 +1,5 @@
+<div id="post_<%= post.id %>" class="post">
+    <p><strong><span class="blacking">Title:</span></strong> <span class="postTitle"><%= link_to_unless_current post.title, group_post_path(@group,post) %></span></p>
+    <p><strong>Detail:</strong> <%= post.detail %></p>
+    <p><strong><span class="rare">Rarity:</span> </strong> <%= post.rarity %></p>
+</div>

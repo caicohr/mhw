@@ -1,0 +1,25 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+p{
+    color: white;
+}
+
+.post{
+    border: thin solid #FAFAD2;
+    margin: 5px;
+    color:white;
+    background-color:rgba(150,192,100,0.8);
+}
+
+.rare{
+    color: rgb(230,0,0);
+}
+
+.postTitle{
+    font-size: 20px;
+}
+
+.blacking{
+    color: black;
+}

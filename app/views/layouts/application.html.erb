@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MHW<%= " | "+yield(:title) unless yield(:title).blank? %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-md" style="background-color: #CFB53B;">
+    <%= link_to "MHW", root_path, class:"navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <%= nav_link "Home", root_path %>
+        <%= nav_link "About", about_path %>
+        <%= nav_link "Quests", questcalendar_path %>
+        <% if current_user %>
+          <%= nav_link "Groups", groups_path %>
+          <%= nav_link "File Collaboration", resumes_path %>
+        <% end %>
+        
+      </ul>
+      <ul class="navbar-nav pull-right mr-auto">
+        <%if current_user %>
+          <%= nav_link current_user.name, current_user %>
+          <%= nav_link "Logout", logout_path %>
+        <% else %>
+          <%= nav_link "Sign Up", signup_path %>
+          <%= nav_link "Login", login_path %>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+  
+  <div id="flash-messages" class="row">
+    <% flash.each do |name, msg| %>
+    <div class="alert alert-<%= name == 'notice' ? 'primary' : 'danger' %> alert-dismissable col" role="alert">
+      <%= msg %>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <% end %>
+  </div>
+
+    <main role="main" class="container">
+        <% if @show_title %>
+        <div id="title" class="row">
+          <div class="col">
+            <h1><%= yield(:title) %></h1>
+          </div>
+        </div>
+        <% end %>
+        <%= yield %>
+    </main>
+    
+  </body>
+  <footer class="footer">
+      <div class="container">
+        &copy; Jerico Radin 2020
+      </div>
+  <footer>
+</html>

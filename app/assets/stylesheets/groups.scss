@@ -1,0 +1,26 @@
+// Place all the styles related to the groups controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.group {
+    border: thin solid #FAFAD2;
+    margin: 5px;
+    color:white;
+    background-color:rgba(192,192,192,0.9);
+    min-height: 200px;
+}
+
+h3 {
+    color: White;
+}
+
+.group_pic {
+    float: right;
+    padding: 15px;
+}
+img {
+    width: 300px;
+}
+.blacking {
+    padding: 0 0 0 5px;
+}

@@ -1,0 +1,22 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+label{
+    color: white;
+}
+.invalid-feedback{
+    font-size:24px;
+    font-weight: bold;
+    background-color: rgba(0,0,0,.5);
+    
+}
+.user {
+    border: thin solid #FAFAD2;
+    margin: 5px;
+    color:white;
+    background-color:rgba(192,192,192,0.9);
+}
+
+.whiting{
+    color:white;
+}

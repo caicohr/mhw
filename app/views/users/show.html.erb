@@ -1,0 +1,10 @@
+<% title "Profile" %>
+
+<div class="user">
+    <p><strong><span class="blacking">Name:</span> </strong><span class="enlarging"><%= @user.name %></span></p>
+    <p><strong><span class="blacking">Username:</span> </strong><%= @user.username %></p>
+    <p><strong><span class="blacking">Email:</span> </strong><%= @user.email %></p>
+</div>
+
+<%= link_to "Edit", edit_user_path(@user) %> |
+<%= link_to "Delete", @user, method: :delete, data: {confirm: "Are you sure?"} %>

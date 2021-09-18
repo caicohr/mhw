@@ -1,0 +1,7 @@
+<% title @post.title %>
+
+<%= render @post %>
+
+<%= link_to "Edit", edit_group_post_path(@group,@post) %> |
+<%= link_to "Delete", group_post_path(@group,@post), method: :delete, data: {confirm: "Are you sure?"} %> |
+<%= link_to "All Posts", group_posts_path(@group) %>

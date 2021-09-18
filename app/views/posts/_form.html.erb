@@ -1,0 +1,10 @@
+<%= bootstrap_form_with(model: [@group, @post], local: true, layout: :horizontal,
+                        label_col: "col-sm-2", control_col: "col-sm-10") do |f| %>
+    <%= f.alert_message "Please fix the errors below.", error_summary: false %>
+    <%= f.text_field :title %>
+    <%= f.text_field :detail %>
+    <%= f.number_field :rarity %>
+    <%= f.form_group do %>
+        <%= f.primary @post.persisted? ? "Update Post" : "Create Post" %>
+    <% end %>
+<% end %>

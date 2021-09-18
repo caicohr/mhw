@@ -1,0 +1,8 @@
+<div id="group_<%= group.id %>" class="group">
+    <div class="group_pic">
+        <img src="<%= group.image_url %>" alt="<%= group.name %> picture">
+    </div>
+    <p><strong><span class="blacking">Name:</span> </strong><span class="enlarging"><%= link_to_unless_current group.name, group %></span></p>
+    <p><strong><span class="blacking">Description:</span> </strong><%= group.description %></p>
+    
+</div>

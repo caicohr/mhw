@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @quest.name %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @quest.start_time %>
+</p>
+
+<%= link_to 'Edit', edit_quest_path(@quest) %> |
+<%= link_to 'Back', quests_path %> |
+<%= link_to 'Destroy', @quest, method: :delete, data: { confirm: 'Are you sure?' } %>
